@@ -107,14 +107,23 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  console.log(arguments[0]);
+  if (arguments.length == 0) return 0;
+  else if (arguments.length == 1) return arguments[0];
+  else prod = 1;
+  for (let i = 0; i < arguments.length; i++) {
+    prod *= arguments[i];
+  }
+  return prod;
 }
-
-multiplicarArgumentos(2, 3);
 
 function cuentoElementos(arreglo) {
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+  cont = 0;
+  for (let i = 0; i < arreglo.length; i++) {
+    if (arreglo[i] > 18) cont++;
+  }
+  return cont;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -122,18 +131,29 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario.
   //Escribe tu código aquí
+  if (numeroDeDia == 1 || numeroDeDia == 7) return "Es fin de semana";
+  else return "Es dia Laboral";
 }
 
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+  num = String(n);
+  if (num[0] == 9) return true;
+  else return false;
 }
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí
+  equals = true;
+  for (let i = 1; i < arreglo.length; i++) {
+    if (arreglo[i] != arreglo[0]) equals = false;
+    break;
+  }
+  return equals;
 }
 
 function mesesDelAño(array) {
@@ -141,6 +161,13 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  tresMeses = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] == "Enero" || array[i] == "Marzo" || array[i] == "Noviembre")
+      tresMeses.push(array[i]);
+  }
+  if (tresMeses.length == 3) return tresMeses;
+  else return "No se encontraron los meses pedidos";
 }
 
 function mayorACien(array) {
