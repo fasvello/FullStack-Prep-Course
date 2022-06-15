@@ -1,3 +1,8 @@
+ body {
+    background-image: url(https://lonelyplanetes.cdnstatics2.com/sites/default/files/fotos/Italia_Roma_500px_74963859_Vasyl%20Onyskiv_500px.jpg);
+    background-size: repeat;
+ }
+ 
  h1 {
      color: green;
  }
@@ -6,8 +11,19 @@
      width: 400px;
      height: 200px;
  }
+.divClass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
- #thirdDiv {
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#thirdDiv {
      background-color: yellow;
  }
 
