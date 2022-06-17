@@ -55,12 +55,15 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+<<<<<<< HEAD
   var array = str.split(" ");
   var new_array = [];
   for (let i = 0; i < array.length; i++) {
     new_array.push(array[i].split("").reverse().join(""));
   }
   return new_array.join(" ");
+=======
+>>>>>>> 6d2c8b62f6fc80d9bce55d01ad3be4abfe76f90c
 }
 
 function capicua(numero) {
@@ -109,11 +112,14 @@ function buscoInterseccion(arreglo1, arreglo2) {
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí
+<<<<<<< HEAD
   res = [];
   arreglo1.forEach(function (elem) {
     if (arreglo2.includes(elem)) res.push(elem);
   });
   return res;
+=======
+>>>>>>> 6d2c8b62f6fc80d9bce55d01ad3be4abfe76f90c
 }
 
 // No modificar nada debajo de esta línea
